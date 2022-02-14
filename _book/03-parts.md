@@ -10,3 +10,7 @@ Add an appendix as a special kind of un-numbered part: `# (APPENDIX) Other stuff
 
 
 
+
+![](_images/r.png)<!-- -->![](_images/rstudio.png)<!-- -->![](_images/bookdown.png)<!-- -->![](_images/github.png)<!-- -->![](_images/netlify.png)<!-- -->
+
+

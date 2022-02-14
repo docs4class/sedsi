@@ -4,7 +4,7 @@ This is just a cool place to put stuff.
 
 Like a schedule, for example:
 
-## Spring 2022  {-}
+## Spring 2022
 
 Date | Topic | 				
 |:-------|:------			
@@ -16,3 +16,48 @@ Date | Topic |
 | 	Wednesday, January 19, 2022	| 	Objects and Arithmetic	| 
 | 	Friday, January 21, 2022	| 	QUIZ 2	| 
 | 	Monday, January 24, 2022	| Summaries and Subscripting	| 
+
+## Or a figure
+
+```{r echo=FALSE}
+time_with_bob_and_wilma_andrews <- seq(1,100, length = 10)
+my_personal_happiness <- c(1,2,4,8,16,32,64,128,0256,512)
+plot(time_with_bob_and_wilma_andrews, my_personal_happiness, pch = 19, type = "b")
+```
+
+## Or an Image
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics(("_images/bob.jpg"))
+knitr::include_graphics(("_images/wilma.jpg"))
+```
+
+## Or an Equation
+
+Here is a fun equation for my SEDSI DASI friends.
+
+\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  (\#eq:binom)
+\end{equation} 
+
+# Workflow Summary
+
+```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
+knitr::include_graphics("_images/r.jpg")
+```
+
+
+```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
+knitr::include_graphics("_images/rstudio.png")
+```
+
+```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
+knitr::include_graphics("_images/github.png")
+```
+
+```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
+knitr::include_graphics("_images/netlify.png")
+```
+
+

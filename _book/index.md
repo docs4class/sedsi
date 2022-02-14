@@ -15,31 +15,19 @@ csl: chicago-fullnote-bibliography.csl
 
 # Motivation
 
-A Covid Classroom
+A COVID Classroom
 
-![](_images/r.jpg)<!-- -->![](_images/rstudio.png)<!-- -->![](_images/bookdown.png)<!-- -->![](_images/github.png)<!-- -->![](_images/netlify.png)<!-- -->
-
-
-
+<img src="_images/empty_class.jpg" style="display: block; margin: auto;" />
 
 A Learning Management System Nightmare
 
-![](_images/empty_class.jpg)<!-- -->
-
+<img src="_images/brightspace.png" style="display: block; margin: auto;" />
 
 Concise and Precisely Organized with Frequent Revisions
 
-![](_images/r4ds_cover.png)<!-- -->
-
-
-![](_images/rstudio.png)<!-- -->
-
-![](_images/rstudio.png)<!-- -->![](_images/rstudio.png)<!-- -->![](_images/rstudio.png)<!-- -->
-
-
-```r
-knitr::include_graphics(rep("_images/rstudio.png", 3))
-```
-
-![](_images/rstudio.png)<!-- -->![](_images/rstudio.png)<!-- -->![](_images/rstudio.png)<!-- -->
+Date | Topic | 				
+|:-------|:------			
+| 	Wednesday, February 16, 2022	| 	SEDSI in Jacksonville	| 
+| 	Thursday, February 17, 2022	| 	Present at 2:45 PM	| 
+| 	Friday, February 18, 2022	| 	Celebrate a successful DASI Session	| 
 

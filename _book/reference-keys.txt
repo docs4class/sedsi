@@ -1,8 +1,13 @@
+eq:binom
 fig:nice-fig
 tab:nice-tab
-eq:binom
 motivation
 hello-sedsi
+spring-2022
+or-a-figure
+or-an-image
+or-an-equation
+workflow-summary
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables
