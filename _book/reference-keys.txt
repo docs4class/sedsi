@@ -1,4 +1,6 @@
 eq:binom
+tab:unnamed-chunk-4
+tab:unnamed-chunk-5
 fig:nice-fig
 tab:nice-tab
 motivation
@@ -6,8 +8,17 @@ hello-sedsi
 spring-2022
 or-a-figure
 or-an-image
+hero-1
+hero-2
 or-an-equation
+or-a-table-of-something
+fun-example-table
+another-fun-example
 workflow-summary
+r-engine-and-rstudio-ide
+bookdown-package
+github
+netlify
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables

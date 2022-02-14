@@ -8,12 +8,11 @@ Like a schedule, for example:
 
 Date | Topic | 				
 |:-------|:------			
-| 	Date	| 	A1	| 
 | 	Monday, January 10, 2022	| 	R basics and install	| 
 | 	Wednesday, January 12, 2022	| 	R basics and workflows	| 
 | 	Friday, January 14, 2022	| 	QUIZ 1 	| 
 | 	Monday, January 17, 2022	| 	MLK Holiday	| 
-| 	Wednesday, January 19, 2022	| 	Objects and Arithmetic	| 
+| 	Wednesday, January 19, 2022	| 	Objects, Vectors, and Arithmetic	| 
 | 	Friday, January 21, 2022	| 	QUIZ 2	| 
 | 	Monday, January 24, 2022	| Summaries and Subscripting	| 
 
@@ -25,10 +24,17 @@ my_personal_happiness <- c(1,2,4,8,16,32,64,128,0256,512)
 plot(time_with_bob_and_wilma_andrews, my_personal_happiness, pch = 19, type = "b")
 ```
 
-## Or an Image
+## Or an Image 
+
+### Hero 1
 
 ```{r echo=FALSE, fig.align='center'}
 knitr::include_graphics(("_images/bob.jpg"))
+```
+
+### Hero 2
+
+```{r echo=FALSE, fig.align='center'}
 knitr::include_graphics(("_images/wilma.jpg"))
 ```
 
@@ -41,20 +47,51 @@ Here is a fun equation for my SEDSI DASI friends.
   (\#eq:binom)
 \end{equation} 
 
-# Workflow Summary
+## Or a table of something
 
-```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
-knitr::include_graphics("_images/r.jpg")
+### Fun example table
+
+```{r echo=FALSE}
+knitr::kable(
+  head(mtcars[, 1:8], 10), booktabs = TRUE,
+  caption = 'A table of the first 10 rows of the mtcars data.'
+)
 ```
 
+### ANOTHER Fun example
+
+```{r echo=FALSE}
+knitr::kable(
+  list(
+    head(iris[, 1:2], 3),
+    head(mtcars[, 1:3], 5)
+  ),
+  caption = 'A Tale of Two Tables.', booktabs = TRUE
+)
+```
+
+
+# Workflow Summary
+
+## R (engine) and Rstudio (IDE)
 
 ```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
 knitr::include_graphics("_images/rstudio.png")
 ```
 
+## bookdown package
+
+```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
+knitr::include_graphics("_images/bookdown.png")
+```
+
+## github
+
 ```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
 knitr::include_graphics("_images/github.png")
 ```
+
+## netlify
 
 ```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
 knitr::include_graphics("_images/netlify.png")

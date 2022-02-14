@@ -15,19 +15,31 @@ csl: chicago-fullnote-bibliography.csl
 
 # Motivation
 
+::: {.rmdimportant}
+
 A COVID Classroom
+
+:::
 
 ```{r echo=FALSE, fig.align = 'center'}
 knitr::include_graphics(("_images/empty_class.jpg"))
 ```
 
+::: {.rmdimportant}
+
 A Learning Management System Nightmare
+
+:::
 
 ```{r echo=FALSE, fig.align = 'center'}
 knitr::include_graphics(("_images/brightspace.png"))
 ```
 
+::: {.rmdimportant}
+
 Concise and Precisely Organized with Frequent Revisions
+
+:::
 
 Date | Topic | 				
 |:-------|:------			

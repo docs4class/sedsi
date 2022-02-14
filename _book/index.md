@@ -15,15 +15,27 @@ csl: chicago-fullnote-bibliography.csl
 
 # Motivation
 
+::: {.rmdimportant}
+
 A COVID Classroom
+
+:::
 
 <img src="_images/empty_class.jpg" style="display: block; margin: auto;" />
 
+::: {.rmdimportant}
+
 A Learning Management System Nightmare
+
+:::
 
 <img src="_images/brightspace.png" style="display: block; margin: auto;" />
 
+::: {.rmdimportant}
+
 Concise and Precisely Organized with Frequent Revisions
+
+:::
 
 Date | Topic | 				
 |:-------|:------			

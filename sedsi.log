@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.14)  14 FEB 2022 17:25
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.14)  14 FEB 2022 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,49 +948,56 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [7]
 File: _images/bob.jpg Graphic file (type bmp)
 <_images/bob.jpg>
-File: _images/wilma.jpg Graphic file (type bmp)
-<_images/wilma.jpg>
-[8] [9] [10
-
-]
-Chapter 3.
-File: _images/r.png Graphic file (type bmp)
-<_images/r.png>
-File: _images/rstudio.png Graphic file (type bmp)
-<_images/rstudio.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[11]
+[8]
+File: _images/wilma.jpg Graphic file (type bmp)
+<_images/wilma.jpg>
+[9] [10]
+Chapter 3.
+File: _images/rstudio.png Graphic file (type bmp)
+<_images/rstudio.png>
+File: _images/bookdown.png Graphic file (type bmp)
+<_images/bookdown.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[11
+
+]
 File: _images/github.png Graphic file (type bmp)
 <_images/github.png>
 File: _images/netlify.png Graphic file (type bmp)
 <_images/netlify.png>
-[12]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[12] [13] [14
+
+]
 Chapter 4.
 
-Overfull \hbox (17.937pt too wide) in paragraph at lines 250--251
+Overfull \hbox (17.937pt too wide) in paragraph at lines 326--327
 []\TU/lmr/m/n/10 To label an un-numbered heading, use: \TU/lmtt/m/n/10 # Hello 
 world {-#nice-label}
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 253--254
+Underfull \hbox (badness 2512) in paragraph at lines 329--330
 []\TU/lmr/m/n/10 Next, reference the labeled heading anywhere in the text using
 
  []
 
-[13
-
-]
+[15]
 File: 02-cross-refs_files/figure-latex/nice-fig-1.pdf Graphic file (type pdf)
 <use 02-cross-refs_files/figure-latex/nice-fig-1.pdf>
-[14] [15] [16
+[16] [17] [18
 
 ]
 Chapter 5.
 
-Underfull \hbox (badness 1859) in paragraph at lines 326--327
+Underfull \hbox (badness 1859) in paragraph at lines 402--403
 []\TU/lmr/m/n/10 Add an unnumbered part: \TU/lmtt/m/n/10 # (PART\*) Act one {-}
  \TU/lmr/m/n/10 (followed by \TU/lmtt/m/n/10 # A
  []
@@ -1006,43 +1013,43 @@ File: _images/github.png Graphic file (type bmp)
 File: _images/netlify.png Graphic file (type bmp)
 <_images/netlify.png>
 
-Overfull \hbox (83.80443pt too wide) in paragraph at lines 330--331
+Overfull \hbox (83.80443pt too wide) in paragraph at lines 406--407
 [][] []
  []
 
 
-Overfull \hbox (161.10126pt too wide) in paragraph at lines 330--331
+Overfull \hbox (161.10126pt too wide) in paragraph at lines 406--407
 [] []
  []
 
-[17] [18]
+[19] [20]
 Chapter 6.
-[19
+[21
 
-] [20
+] [22
 
 ]
 Chapter 7.
-[21] [22]
+[23] [24]
 Chapter 8.
-[23
+[25
 
-] (./sedsi.bbl [24]) [25
+] (./sedsi.bbl [26]) [27
 
 ] (./sedsi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `sedsi.out' has not changed.
-(rerunfilecheck)             Checksum: 7AF47A295FEB8D5C95F41A5A623271A6;2700.
+(rerunfilecheck)             Checksum: 5C2815FB3B7B38CE95C3850C09F6C991;3414.
  ) 
 Here is how much of TeX's memory you used:
- 17449 strings out of 479212
- 304776 string characters out of 5873009
- 752930 words of memory out of 5000000
- 36762 multiletter control sequences out of 15000+600000
- 409921 words of font info for 85 fonts, out of 8000000 for 9000
+ 17463 strings out of 479212
+ 305054 string characters out of 5873009
+ 760456 words of memory out of 5000000
+ 36775 multiletter control sequences out of 15000+600000
+ 409929 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,8n,122p,378b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,8n,122p,378b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sedsi.pdf (25 pages).
+Output written on sedsi.pdf (27 pages).
