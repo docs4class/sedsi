@@ -35,9 +35,23 @@ Date | Topic |
 
 # Real life example
 
-Show the student data as an en exaple of reproducible research-->
+::: {.rmdimportant}
 
-then seguway to teacher from reproducible research focus.
+It's nice to know exactly what you did when your original data requires wrangling.
+
+:::
+
+Conflicts and students honors... 
+
+```{r echo=FALSE}
+EBA <- read.csv("C:/Users/jtturner/Desktop/EBA dept conflicts - Dashboard - MultiColumn1.csv")
+library(dplyr)
+q1 <- EBA %>% 
+  select(NAME, TOTAL.HOURS, PC.HOURS, ADMIT.TERM) %>% 
+  arrange((ADMIT.TERM))
+head(q1, 15)
+q1[20:30,]
+```
 
 
 # Some Options

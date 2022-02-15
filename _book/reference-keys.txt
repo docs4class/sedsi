@@ -1,5 +1,5 @@
 eq:binom
-tab:unnamed-chunk-6
+tab:unnamed-chunk-7
 sedsi-2022
 motivation
 real-life-example
@@ -18,4 +18,5 @@ bookdown-package
 github
 netlify
 lab-3-coronavirus-visualization-data-wrangling-and-dates
+overview
 lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals.

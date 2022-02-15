@@ -1,8 +1,10 @@
 # Lab 3: `coronavirus` visualization, data wrangling, and dates
 
+## Overview
+
 The package is available on GitHub [here](https://github.com/RamiKrispin/coronavirus) and is updated daily.
 
-> I use the `coronavirus` package and use the `coronavirus::update_data()` function to keep the data current.  This also has the dates preformatted which can be nice.
+I use the `coronavirus` package and use the `coronavirus::update_data()` function to keep the data current.  This also has the dates preformatted which can be nice.
 
 
 ## Let's look like Applied Analytics Superstars and make some neat visuals.
@@ -19,7 +21,7 @@ coronavirus::update_dataset()
 #> 
 #> i Use `spec()` to retrieve the full column specification for this data.
 #> i Specify the column types or set `show_col_types = FALSE` to quiet this message.
-#> Updates are available on the coronavirus Dev version, do you want to update? n/Y
+#> No updates are available
 ```
 
 
@@ -64,7 +66,7 @@ For example, what does this summary let us know?
 ```r
 summary(coronavirus$cases)
 #>      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-#> -30974748         0         0       651        30   1369637
+#> -30974748         0         0       668        30   1368563
 ```
 
 1. Can you create a visual showing the cases over time for Russia, Spain, US, and Venezuela?
@@ -118,10 +120,10 @@ Let's make a little table of just date, country, and deaths (with a meaningful v
 #> 5 2020-01-26  Russia      0
 #> 6 2020-01-27  Russia      0
 #>     country   n
-#> 1    Russia 748
-#> 2     Spain 745
-#> 3        US 748
-#> 4 Venezuela 747
+#> 1    Russia 755
+#> 2     Spain 752
+#> 3        US 755
+#> 4 Venezuela 754
 ```
 
 Let's make a little table of just confirmed cases.
@@ -136,10 +138,10 @@ Let's make a little table of just confirmed cases.
 #> 5 2020-01-26  Russia         0
 #> 6 2020-01-27  Russia         0
 #>     country   n
-#> 1    Russia 748
-#> 2     Spain 748
-#> 3        US 748
-#> 4 Venezuela 748
+#> 1    Russia 755
+#> 2     Spain 755
+#> 3        US 755
+#> 4 Venezuela 755
 ```
 
 Let's join these together. I use `left_join`.  
@@ -155,10 +157,10 @@ Let's join these together. I use `left_join`.
 #> 5 2020-01-26  Russia      0         0
 #> 6 2020-01-27  Russia      0         0
 #>     country   n
-#> 1    Russia 748
-#> 2     Spain 748
-#> 3        US 748
-#> 4 Venezuela 748
+#> 1    Russia 755
+#> 2     Spain 755
+#> 3        US 755
+#> 4 Venezuela 755
 ```
 
 Let's add some cumulative statistics as well.
@@ -188,27 +190,27 @@ Now we can plot some more fun stuff.
 
 ```
 #>       date              country              deaths      
-#>  Min.   :2020-01-22   Length:2992        Min.   :   0.0  
-#>  1st Qu.:2020-07-26   Class :character   1st Qu.:   5.0  
-#>  Median :2021-01-29   Mode  :character   Median : 123.0  
-#>  Mean   :2021-01-29                      Mean   : 447.5  
-#>  3rd Qu.:2021-08-04                      3rd Qu.: 633.0  
-#>  Max.   :2022-02-07                      Max.   :4442.0  
+#>  Min.   :2020-01-22   Length:3020        Min.   :   0.0  
+#>  1st Qu.:2020-07-28   Class :character   1st Qu.:   5.0  
+#>  Median :2021-02-02   Mode  :character   Median : 125.5  
+#>  Mean   :2021-02-02                      Mean   : 451.2  
+#>  3rd Qu.:2021-08-10                      3rd Qu.: 637.5  
+#>  Max.   :2022-02-14                      Max.   :4442.0  
 #>                                          NA's   :4       
-#>    confirmed       cumulative_cases    cumulative_deaths
-#>  Min.   : -74937   Min.   :        0   Min.   :     0   
-#>  1st Qu.:    450   1st Qu.: 12782791   1st Qu.: 16728   
-#>  Median :   7723   Median : 23178262   Median : 97790   
-#>  Mean   :  33599   Mean   : 41557773   Mean   :132138   
-#>  3rd Qu.:  27682   3rd Qu.:100031030   3rd Qu.:240231   
-#>  Max.   :1369637   Max.   :100527313   Max.   :358016   
-#>                                        NA's   :2120     
+#>    confirmed         cumulative_cases    cumulative_deaths
+#>  Min.   : -74937.0   Min.   :        0   Min.   :     0   
+#>  1st Qu.:    458.2   1st Qu.: 14102736   1st Qu.: 16922   
+#>  Median :   7785.5   Median : 24775642   Median : 99049   
+#>  Mean   :  34172.4   Mean   : 43119360   Mean   :134411   
+#>  3rd Qu.:  27947.2   3rd Qu.:102694694   3rd Qu.:246397   
+#>  Max.   :1368563.0   Max.   :103200641   Max.   :362845   
+#>                                          NA's   :2141     
 #>       rate          
 #>  Min.   :-0.036576  
-#>  1st Qu.: 0.004592  
-#>  Median : 0.012829  
-#>  Mean   : 0.021843  
-#>  3rd Qu.: 0.023418  
+#>  1st Qu.: 0.004568  
+#>  Median : 0.012754  
+#>  Mean   : 0.021708  
+#>  3rd Qu.: 0.023302  
 #>  Max.   : 3.840391  
 #>  NA's   :4
 ```

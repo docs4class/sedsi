@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 6 Lab 3: coronavirus visualization, data wrangling, and dates | SEDSI 2022</title>
 <meta name="author" content="Tobin Turner">
-<meta name="description" content="The package is available on GitHub here and is updated daily. I use the coronavirus package and use the coronavirus::update_data() function to keep the data current. This also has the dates...">
+<meta name="description" content="6.1 Overview The package is available on GitHub here and is updated daily. I use the coronavirus package and use the coronavirus::update_data() function to keep the data current. This also has the...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 6 Lab 3: coronavirus visualization, data wrangling, and dates | SEDSI 2022">
 <meta property="og:type" content="book">
-<meta property="og:description" content="The package is available on GitHub here and is updated daily. I use the coronavirus package and use the coronavirus::update_data() function to keep the data current. This also has the dates...">
+<meta property="og:description" content="6.1 Overview The package is available on GitHub here and is updated daily. I use the coronavirus package and use the coronavirus::update_data() function to keep the data current. This also has the...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 6 Lab 3: coronavirus visualization, data wrangling, and dates | SEDSI 2022">
-<meta name="twitter:description" content="The package is available on GitHub here and is updated daily. I use the coronavirus package and use the coronavirus::update_data() function to keep the data current. This also has the dates...">
+<meta name="twitter:description" content="6.1 Overview The package is available on GitHub here and is updated daily. I use the coronavirus package and use the coronavirus::update_data() function to keep the data current. This also has the...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -56,15 +56,18 @@
 <h1>
 <span class="header-section-number">6</span> Lab 3: <code>coronavirus</code> visualization, data wrangling, and dates<a class="anchor" aria-label="anchor" href="#lab-3-coronavirus-visualization-data-wrangling-and-dates"><i class="fas fa-link"></i></a>
 </h1>
-<p>The package is available on GitHub <a href="https://github.com/RamiKrispin/coronavirus">here</a> and is updated daily.</p>
-<blockquote>
-<p>I use the <code>coronavirus</code> package and use the <code>coronavirus::update_data()</code> function to keep the data current. This also has the dates preformatted which can be nice.</p>
-</blockquote>
-<div id="lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals." class="section level2" number="6.1">
+<div id="overview" class="section level2" number="6.1">
 <h2>
-<span class="header-section-number">6.1</span> Let’s look like Applied Analytics Superstars and make some neat visuals.<a class="anchor" aria-label="anchor" href="#lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals."><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> Overview<a class="anchor" aria-label="anchor" href="#overview"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<p>The package is available on GitHub <a href="https://github.com/RamiKrispin/coronavirus">here</a> and is updated daily.</p>
+<p>I use the <code>coronavirus</code> package and use the <code>coronavirus::update_data()</code> function to keep the data current. This also has the dates preformatted which can be nice.</p>
+</div>
+<div id="lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals." class="section level2" number="6.2">
+<h2>
+<span class="header-section-number">6.2</span> Let’s look like Applied Analytics Superstars and make some neat visuals.<a class="anchor" aria-label="anchor" href="#lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals."><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">coronavirus</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/coronavirus/man/update_dataset.html">update_dataset</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 627405 Columns: 15</span>
 <span class="co">#&gt; -- Column specification ------------------------------------</span>
@@ -75,13 +78,13 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; i Use `spec()` to retrieve the full column specification for this data.</span>
 <span class="co">#&gt; i Specify the column types or set `show_col_types = FALSE` to quiet this message.</span>
-<span class="co">#&gt; Updates are available on the coronavirus Dev version, do you want to update? n/Y</span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<span class="co">#&gt; No updates are available</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/RamiKrispin/coronavirus">coronavirus</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></code></pre></div>
 <p>I’d recommend you always start by trying to understand a bit about the data.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">coronavirus</span><span class="op">)</span>
 <span class="co">#&gt;         date province country     lat      long      type</span>
 <span class="co">#&gt; 1 2020-01-22  Alberta  Canada 53.9333 -116.5765 confirmed</span>
@@ -105,10 +108,10 @@
 <span class="co">#&gt; 5  North America             NA</span>
 <span class="co">#&gt; 6  North America             NA</span></code></pre></div>
 <p>For example, what does this summary let us know?</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">coronavirus</span><span class="op">$</span><span class="va">cases</span><span class="op">)</span>
 <span class="co">#&gt;      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. </span>
-<span class="co">#&gt; -30974748         0         0       651        30   1369637</span></code></pre></div>
+<span class="co">#&gt; -30974748         0         0       668        30   1368563</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Can you create a visual showing the cases over time for Russia, Spain, US, and Venezuela?
 Also, why might <code>filter(cases &gt;= 0)</code> be worth using?</li>
@@ -130,7 +133,7 @@ Also, why might <code>filter(cases &gt;= 0)</code> be worth using?</li>
 <ol start="6" style="list-style-type: decimal">
 <li>With a little more time and a few extra packages, we <strong>could</strong> make a graph prettier. Try.</li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/slowkow/ggrepel">ggrepel</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tidyverse/glue">glue</a></span><span class="op">)</span>
@@ -149,10 +152,10 @@ Also, why might <code>filter(cases &gt;= 0)</code> be worth using?</li>
 #&gt; 5 2020-01-26  Russia      0
 #&gt; 6 2020-01-27  Russia      0
 #&gt;     country   n
-#&gt; 1    Russia 748
-#&gt; 2     Spain 745
-#&gt; 3        US 748
-#&gt; 4 Venezuela 747</code></pre>
+#&gt; 1    Russia 755
+#&gt; 2     Spain 752
+#&gt; 3        US 755
+#&gt; 4 Venezuela 754</code></pre>
 <p>Let’s make a little table of just confirmed cases.</p>
 <pre><code>#&gt;         date country confirmed
 #&gt; 1 2020-01-22  Russia         0
@@ -162,10 +165,10 @@ Also, why might <code>filter(cases &gt;= 0)</code> be worth using?</li>
 #&gt; 5 2020-01-26  Russia         0
 #&gt; 6 2020-01-27  Russia         0
 #&gt;     country   n
-#&gt; 1    Russia 748
-#&gt; 2     Spain 748
-#&gt; 3        US 748
-#&gt; 4 Venezuela 748</code></pre>
+#&gt; 1    Russia 755
+#&gt; 2     Spain 755
+#&gt; 3        US 755
+#&gt; 4 Venezuela 755</code></pre>
 <p>Let’s join these together. I use <code>left_join</code>.</p>
 <pre><code>#&gt;         date country deaths confirmed
 #&gt; 1 2020-01-22  Russia      0         0
@@ -175,10 +178,10 @@ Also, why might <code>filter(cases &gt;= 0)</code> be worth using?</li>
 #&gt; 5 2020-01-26  Russia      0         0
 #&gt; 6 2020-01-27  Russia      0         0
 #&gt;     country   n
-#&gt; 1    Russia 748
-#&gt; 2     Spain 748
-#&gt; 3        US 748
-#&gt; 4 Venezuela 748</code></pre>
+#&gt; 1    Russia 755
+#&gt; 2     Spain 755
+#&gt; 3        US 755
+#&gt; 4 Venezuela 755</code></pre>
 <p>Let’s add some cumulative statistics as well.</p>
 <pre><code>#&gt;         date country deaths confirmed cumulative_cases
 #&gt; 1 2020-01-22  Russia      0         0                0
@@ -197,27 +200,27 @@ Also, why might <code>filter(cases &gt;= 0)</code> be worth using?</li>
 <p>Now we can plot some more fun stuff.</p>
 <div class="inline-figure"><img src="105-coronavirus_lab_files/figure-html/unnamed-chunk-15-1.png" width="672"></div>
 <pre><code>#&gt;       date              country              deaths      
-#&gt;  Min.   :2020-01-22   Length:2992        Min.   :   0.0  
-#&gt;  1st Qu.:2020-07-26   Class :character   1st Qu.:   5.0  
-#&gt;  Median :2021-01-29   Mode  :character   Median : 123.0  
-#&gt;  Mean   :2021-01-29                      Mean   : 447.5  
-#&gt;  3rd Qu.:2021-08-04                      3rd Qu.: 633.0  
-#&gt;  Max.   :2022-02-07                      Max.   :4442.0  
+#&gt;  Min.   :2020-01-22   Length:3020        Min.   :   0.0  
+#&gt;  1st Qu.:2020-07-28   Class :character   1st Qu.:   5.0  
+#&gt;  Median :2021-02-02   Mode  :character   Median : 125.5  
+#&gt;  Mean   :2021-02-02                      Mean   : 451.2  
+#&gt;  3rd Qu.:2021-08-10                      3rd Qu.: 637.5  
+#&gt;  Max.   :2022-02-14                      Max.   :4442.0  
 #&gt;                                          NA's   :4       
-#&gt;    confirmed       cumulative_cases    cumulative_deaths
-#&gt;  Min.   : -74937   Min.   :        0   Min.   :     0   
-#&gt;  1st Qu.:    450   1st Qu.: 12782791   1st Qu.: 16728   
-#&gt;  Median :   7723   Median : 23178262   Median : 97790   
-#&gt;  Mean   :  33599   Mean   : 41557773   Mean   :132138   
-#&gt;  3rd Qu.:  27682   3rd Qu.:100031030   3rd Qu.:240231   
-#&gt;  Max.   :1369637   Max.   :100527313   Max.   :358016   
-#&gt;                                        NA's   :2120     
+#&gt;    confirmed         cumulative_cases    cumulative_deaths
+#&gt;  Min.   : -74937.0   Min.   :        0   Min.   :     0   
+#&gt;  1st Qu.:    458.2   1st Qu.: 14102736   1st Qu.: 16922   
+#&gt;  Median :   7785.5   Median : 24775642   Median : 99049   
+#&gt;  Mean   :  34172.4   Mean   : 43119360   Mean   :134411   
+#&gt;  3rd Qu.:  27947.2   3rd Qu.:102694694   3rd Qu.:246397   
+#&gt;  Max.   :1368563.0   Max.   :103200641   Max.   :362845   
+#&gt;                                          NA's   :2141     
 #&gt;       rate          
 #&gt;  Min.   :-0.036576  
-#&gt;  1st Qu.: 0.004592  
-#&gt;  Median : 0.012829  
-#&gt;  Mean   : 0.021843  
-#&gt;  3rd Qu.: 0.023418  
+#&gt;  1st Qu.: 0.004568  
+#&gt;  Median : 0.012754  
+#&gt;  Mean   : 0.021708  
+#&gt;  3rd Qu.: 0.023302  
 #&gt;  Max.   : 3.840391  
 #&gt;  NA's   :4</code></pre>
 <div class="inline-figure"><img src="105-coronavirus_lab_files/figure-html/unnamed-chunk-15-2.png" width="672"></div>
@@ -238,7 +241,8 @@ Also, why might <code>filter(cases &gt;= 0)</code> be worth using?</li>
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#lab-3-coronavirus-visualization-data-wrangling-and-dates"><span class="header-section-number">6</span> Lab 3: coronavirus visualization, data wrangling, and dates</a></li>
-<li><a class="nav-link" href="#lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals."><span class="header-section-number">6.1</span> Let’s look like Applied Analytics Superstars and make some neat visuals.</a></li>
+<li><a class="nav-link" href="#overview"><span class="header-section-number">6.1</span> Overview</a></li>
+<li><a class="nav-link" href="#lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals."><span class="header-section-number">6.2</span> Let’s look like Applied Analytics Superstars and make some neat visuals.</a></li>
 </ul>
 
       <div class="book-extra">

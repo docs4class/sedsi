@@ -161,9 +161,76 @@ Friday, February 18, 2022 & Celebrate a successful DASI Session \\
 \hypertarget{real-life-example}{%
 \chapter{Real life example}\label{real-life-example}}
 
-Show the student data as an en exaple of reproducible research--\textgreater{}
+It's nice to know exactly what you did when your original data requires wrangling.
 
-then seguway to teacher from reproducible research focus.
+Conflicts and students honors\ldots{}
+
+\begin{verbatim}
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
+#>                               NAME TOTAL.HOURS PC.HOURS
+#> 1          Greer, Patrick Sterling         3.0      3.0
+#> 2          Greer, Patrick Sterling       144.0    123.0
+#> 3      Thompson, Charleston Hannah         0.0      0.0
+#> 4      Thompson, Charleston Hannah       142.0    122.0
+#> 5  Melvin, Victor Richard-Scorsese       132.0    100.0
+#> 6          Roberson, States Taylor       126.0     99.0
+#> 7           Allen, Kaylee Michelle       125.0     68.0
+#> 8           Phelps, Payton Elliott       117.0    114.0
+#> 9       Rowley, Ella Marie Dorothy       121.0    121.0
+#> 10           Smith, Michael Leston       112.0    112.0
+#> 11          Taylor, Darrell Tyrese        78.0     78.0
+#> 12          Wright, Alexandra Ruby       116.0    116.0
+#> 13                     Adu, Tyler         80.0     80.0
+#> 14           Armell, James Richard        90.0     87.0
+#> 15            Bell, Carrie Abigail       120.5     99.5
+#>    ADMIT.TERM
+#> 1      201101
+#> 2      201101
+#> 3      201201
+#> 4      201201
+#> 5      201202
+#> 6      201301
+#> 7      201601
+#> 8      201701
+#> 9      201701
+#> 10     201701
+#> 11     201701
+#> 12     201701
+#> 13     201801
+#> 14     201801
+#> 15     201801
+#>                           NAME TOTAL.HOURS PC.HOURS
+#> 20         Drake, John Chapman          94       94
+#> 21    Edwards, Nicholas Graham         101       83
+#> 22             Ham, Ethan Ross          90       90
+#> 23        Harmon, Luke Elliott          91       91
+#> 24 Humphries, Lillian Kristine          87       78
+#> 25          Julien, Christina          101       89
+#> 26     Klimpel, Jake Frederick         103       97
+#> 27        Leeman, Jessica Kate          92       92
+#> 28      Martin, Caroline Grace         101       95
+#> 29    Matthews, William McGill          96       81
+#> 30  McCutchen, Caroline Louise         118       94
+#>    ADMIT.TERM
+#> 20     201801
+#> 21     201801
+#> 22     201801
+#> 23     201801
+#> 24     201801
+#> 25     201801
+#> 26     201801
+#> 27     201801
+#> 28     201801
+#> 29     201801
+#> 30     201801
+\end{verbatim}
 
 \hypertarget{some-options}{%
 \chapter{Some Options}\label{some-options}}
@@ -197,7 +264,7 @@ Monday, January 24, 2022 & Summaries and Subscripting \\
 \hypertarget{or-a-figure}{%
 \section{Or a figure}\label{or-a-figure}}
 
-\includegraphics{01-intro_files/figure-latex/unnamed-chunk-3-1.pdf}
+\includegraphics{01-intro_files/figure-latex/unnamed-chunk-4-1.pdf}
 
 \hypertarget{or-an-image}{%
 \section{Or an Image}\label{or-an-image}}
@@ -230,7 +297,7 @@ Here is a \textbf{fun} equation for my SEDSI DASI friends:
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-6}A table of the first 10 rows of the mtcars data.}
+\caption{\label{tab:unnamed-chunk-7}A table of the first 10 rows of the mtcars data.}
 \centering
 \begin{tabular}[t]{lrrrrrrrr}
 \toprule
@@ -277,11 +344,12 @@ Merc 280 & 19.2 & 6 & 167.6 & 123 & 3.92 & 3.440 & 18.30 & 1\\
 \hypertarget{lab-3-coronavirus-visualization-data-wrangling-and-dates}{%
 \chapter{\texorpdfstring{Lab 3: \texttt{coronavirus} visualization, data wrangling, and dates}{Lab 3: coronavirus visualization, data wrangling, and dates}}\label{lab-3-coronavirus-visualization-data-wrangling-and-dates}}
 
+\hypertarget{overview}{%
+\section{Overview}\label{overview}}
+
 The package is available on GitHub \href{https://github.com/RamiKrispin/coronavirus}{here} and is updated daily.
 
-\begin{quote}
 I use the \texttt{coronavirus} package and use the \texttt{coronavirus::update\_data()} function to keep the data current. This also has the dates preformatted which can be nice.
-\end{quote}
 
 \hypertarget{lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals.}{%
 \section{Let's look like Applied Analytics Superstars and make some neat visuals.}\label{lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals.}}
@@ -298,7 +366,7 @@ I use the \texttt{coronavirus} package and use the \texttt{coronavirus::update\_
 \CommentTok{\#\textgreater{} }
 \CommentTok{\#\textgreater{} i Use \textasciigrave{}spec()\textasciigrave{} to retrieve the full column specification for this data.}
 \CommentTok{\#\textgreater{} i Specify the column types or set \textasciigrave{}show\_col\_types = FALSE\textasciigrave{} to quiet this message.}
-\CommentTok{\#\textgreater{} Updates are available on the coronavirus Dev version, do you want to update? n/Y}
+\CommentTok{\#\textgreater{} No updates are available}
 \end{Highlighting}
 \end{Shaded}
 
@@ -345,7 +413,7 @@ For example, what does this summary let us know?
 \begin{Highlighting}[]
 \FunctionTok{summary}\NormalTok{(coronavirus}\SpecialCharTok{$}\NormalTok{cases)}
 \CommentTok{\#\textgreater{}      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. }
-\CommentTok{\#\textgreater{} {-}30974748         0         0       651        30   1369637}
+\CommentTok{\#\textgreater{} {-}30974748         0         0       668        30   1368563}
 \end{Highlighting}
 \end{Shaded}
 
@@ -430,10 +498,10 @@ Let's make a little table of just date, country, and deaths (with a meaningful v
 #> 5 2020-01-26  Russia      0
 #> 6 2020-01-27  Russia      0
 #>     country   n
-#> 1    Russia 748
-#> 2     Spain 745
-#> 3        US 748
-#> 4 Venezuela 747
+#> 1    Russia 755
+#> 2     Spain 752
+#> 3        US 755
+#> 4 Venezuela 754
 \end{verbatim}
 
 Let's make a little table of just confirmed cases.
@@ -447,10 +515,10 @@ Let's make a little table of just confirmed cases.
 #> 5 2020-01-26  Russia         0
 #> 6 2020-01-27  Russia         0
 #>     country   n
-#> 1    Russia 748
-#> 2     Spain 748
-#> 3        US 748
-#> 4 Venezuela 748
+#> 1    Russia 755
+#> 2     Spain 755
+#> 3        US 755
+#> 4 Venezuela 755
 \end{verbatim}
 
 Let's join these together. I use \texttt{left\_join}.
@@ -464,10 +532,10 @@ Let's join these together. I use \texttt{left\_join}.
 #> 5 2020-01-26  Russia      0         0
 #> 6 2020-01-27  Russia      0         0
 #>     country   n
-#> 1    Russia 748
-#> 2     Spain 748
-#> 3        US 748
-#> 4 Venezuela 748
+#> 1    Russia 755
+#> 2     Spain 755
+#> 3        US 755
+#> 4 Venezuela 755
 \end{verbatim}
 
 Let's add some cumulative statistics as well.
@@ -495,27 +563,27 @@ Now we can plot some more fun stuff.
 
 \begin{verbatim}
 #>       date              country              deaths      
-#>  Min.   :2020-01-22   Length:2992        Min.   :   0.0  
-#>  1st Qu.:2020-07-26   Class :character   1st Qu.:   5.0  
-#>  Median :2021-01-29   Mode  :character   Median : 123.0  
-#>  Mean   :2021-01-29                      Mean   : 447.5  
-#>  3rd Qu.:2021-08-04                      3rd Qu.: 633.0  
-#>  Max.   :2022-02-07                      Max.   :4442.0  
+#>  Min.   :2020-01-22   Length:3020        Min.   :   0.0  
+#>  1st Qu.:2020-07-28   Class :character   1st Qu.:   5.0  
+#>  Median :2021-02-02   Mode  :character   Median : 125.5  
+#>  Mean   :2021-02-02                      Mean   : 451.2  
+#>  3rd Qu.:2021-08-10                      3rd Qu.: 637.5  
+#>  Max.   :2022-02-14                      Max.   :4442.0  
 #>                                          NA's   :4       
-#>    confirmed       cumulative_cases    cumulative_deaths
-#>  Min.   : -74937   Min.   :        0   Min.   :     0   
-#>  1st Qu.:    450   1st Qu.: 12782791   1st Qu.: 16728   
-#>  Median :   7723   Median : 23178262   Median : 97790   
-#>  Mean   :  33599   Mean   : 41557773   Mean   :132138   
-#>  3rd Qu.:  27682   3rd Qu.:100031030   3rd Qu.:240231   
-#>  Max.   :1369637   Max.   :100527313   Max.   :358016   
-#>                                        NA's   :2120     
+#>    confirmed         cumulative_cases    cumulative_deaths
+#>  Min.   : -74937.0   Min.   :        0   Min.   :     0   
+#>  1st Qu.:    458.2   1st Qu.: 14102736   1st Qu.: 16922   
+#>  Median :   7785.5   Median : 24775642   Median : 99049   
+#>  Mean   :  34172.4   Mean   : 43119360   Mean   :134411   
+#>  3rd Qu.:  27947.2   3rd Qu.:102694694   3rd Qu.:246397   
+#>  Max.   :1368563.0   Max.   :103200641   Max.   :362845   
+#>                                          NA's   :2141     
 #>       rate          
 #>  Min.   :-0.036576  
-#>  1st Qu.: 0.004592  
-#>  Median : 0.012829  
-#>  Mean   : 0.021843  
-#>  3rd Qu.: 0.023418  
+#>  1st Qu.: 0.004568  
+#>  Median : 0.012754  
+#>  Mean   : 0.021708  
+#>  3rd Qu.: 0.023302  
 #>  Max.   : 3.840391  
 #>  NA's   :4
 \end{verbatim}

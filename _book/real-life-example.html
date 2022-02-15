@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 3 Real life example | SEDSI 2022</title>
 <meta name="author" content="Tobin Turner">
-<meta name="description" content="Show the student data as an en exaple of reproducible research–&gt; then seguway to teacher from reproducible research focus.">
+<meta name="description" content="It’s nice to know exactly what you did when your original data requires wrangling. Conflicts and students honors… #&gt; #&gt; Attaching package: 'dplyr' #&gt; The following objects are masked from...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 3 Real life example | SEDSI 2022">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Show the student data as an en exaple of reproducible research–&gt; then seguway to teacher from reproducible research focus.">
+<meta property="og:description" content="It’s nice to know exactly what you did when your original data requires wrangling. Conflicts and students honors… #&gt; #&gt; Attaching package: 'dplyr' #&gt; The following objects are masked from...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 3 Real life example | SEDSI 2022">
-<meta name="twitter:description" content="Show the student data as an en exaple of reproducible research–&gt; then seguway to teacher from reproducible research focus.">
+<meta name="twitter:description" content="It’s nice to know exactly what you did when your original data requires wrangling. Conflicts and students honors… #&gt; #&gt; Attaching package: 'dplyr' #&gt; The following objects are masked from...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -56,8 +56,74 @@
 <h1>
 <span class="header-section-number">3</span> Real life example<a class="anchor" aria-label="anchor" href="#real-life-example"><i class="fas fa-link"></i></a>
 </h1>
-<p>Show the student data as an en exaple of reproducible research–&gt;</p>
-<p>then seguway to teacher from reproducible research focus.</p>
+<div class="rmdimportant">
+<p>It’s nice to know exactly what you did when your original data requires wrangling.</p>
+</div>
+<p>Conflicts and students honors…</p>
+<pre><code>#&gt; 
+#&gt; Attaching package: 'dplyr'
+#&gt; The following objects are masked from 'package:stats':
+#&gt; 
+#&gt;     filter, lag
+#&gt; The following objects are masked from 'package:base':
+#&gt; 
+#&gt;     intersect, setdiff, setequal, union
+#&gt;                               NAME TOTAL.HOURS PC.HOURS
+#&gt; 1          Greer, Patrick Sterling         3.0      3.0
+#&gt; 2          Greer, Patrick Sterling       144.0    123.0
+#&gt; 3      Thompson, Charleston Hannah         0.0      0.0
+#&gt; 4      Thompson, Charleston Hannah       142.0    122.0
+#&gt; 5  Melvin, Victor Richard-Scorsese       132.0    100.0
+#&gt; 6          Roberson, States Taylor       126.0     99.0
+#&gt; 7           Allen, Kaylee Michelle       125.0     68.0
+#&gt; 8           Phelps, Payton Elliott       117.0    114.0
+#&gt; 9       Rowley, Ella Marie Dorothy       121.0    121.0
+#&gt; 10           Smith, Michael Leston       112.0    112.0
+#&gt; 11          Taylor, Darrell Tyrese        78.0     78.0
+#&gt; 12          Wright, Alexandra Ruby       116.0    116.0
+#&gt; 13                     Adu, Tyler         80.0     80.0
+#&gt; 14           Armell, James Richard        90.0     87.0
+#&gt; 15            Bell, Carrie Abigail       120.5     99.5
+#&gt;    ADMIT.TERM
+#&gt; 1      201101
+#&gt; 2      201101
+#&gt; 3      201201
+#&gt; 4      201201
+#&gt; 5      201202
+#&gt; 6      201301
+#&gt; 7      201601
+#&gt; 8      201701
+#&gt; 9      201701
+#&gt; 10     201701
+#&gt; 11     201701
+#&gt; 12     201701
+#&gt; 13     201801
+#&gt; 14     201801
+#&gt; 15     201801
+#&gt;                           NAME TOTAL.HOURS PC.HOURS
+#&gt; 20         Drake, John Chapman          94       94
+#&gt; 21    Edwards, Nicholas Graham         101       83
+#&gt; 22             Ham, Ethan Ross          90       90
+#&gt; 23        Harmon, Luke Elliott          91       91
+#&gt; 24 Humphries, Lillian Kristine          87       78
+#&gt; 25          Julien, Christina          101       89
+#&gt; 26     Klimpel, Jake Frederick         103       97
+#&gt; 27        Leeman, Jessica Kate          92       92
+#&gt; 28      Martin, Caroline Grace         101       95
+#&gt; 29    Matthews, William McGill          96       81
+#&gt; 30  McCutchen, Caroline Louise         118       94
+#&gt;    ADMIT.TERM
+#&gt; 20     201801
+#&gt; 21     201801
+#&gt; 22     201801
+#&gt; 23     201801
+#&gt; 24     201801
+#&gt; 25     201801
+#&gt; 26     201801
+#&gt; 27     201801
+#&gt; 28     201801
+#&gt; 29     201801
+#&gt; 30     201801</code></pre>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="motivation.html"><span class="header-section-number">2</span> Motivation</a></div>
