@@ -284,3 +284,6 @@ ggplot(data = df3,
   )
 ```
 
+# Thoughts?  Questions?  Discussion?
+
+## Thank you for your time!

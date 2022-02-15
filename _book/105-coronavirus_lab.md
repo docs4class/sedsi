@@ -217,3 +217,6 @@ Now we can plot some more fun stuff.
 
 ![](105-coronavirus_lab_files/figure-epub3/unnamed-chunk-15-2.png)<!-- -->
 
+# Thoughts?  Questions?  Discussion?
+
+## Thank you for your time!

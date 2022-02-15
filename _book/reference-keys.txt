@@ -1,3 +1,4 @@
+tab:unnamed-chunk-3
 eq:binom
 tab:unnamed-chunk-7
 sedsi-2022
@@ -20,3 +21,5 @@ netlify
 lab-3-coronavirus-visualization-data-wrangling-and-dates
 overview
 lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals.
+thoughts-questions-discussion
+thank-you-for-your-time

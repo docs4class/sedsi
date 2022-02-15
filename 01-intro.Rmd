@@ -43,24 +43,24 @@ It's nice to know exactly what you did when your original data requires wranglin
 
 Conflicts and students honors... 
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 EBA <- read.csv("C:/Users/jtturner/Desktop/EBA dept conflicts - Dashboard - MultiColumn1.csv")
 library(dplyr)
 q1 <- EBA %>% 
   select(NAME, TOTAL.HOURS, PC.HOURS, ADMIT.TERM) %>% 
   arrange((ADMIT.TERM))
-head(q1, 15)
-q1[20:30,]
+q1 <- q1[20:30,]
+knitr::kable(q1, caption = "Some Actual Data We Considered")
 ```
 
 
 # Some Options
 
-> This is just a cool place to put stuff^[Footnotes are always neat. And useful. Like this one!].
+
+This is just a cool place to put stuff^[Footnotes are always neat. And useful. Like this one!].
 
 Like a schedule, for example:
 
-Footnotes are put inside the square brackets after a caret ^[]. Like this one.1
 
 ## Spring 2022
 

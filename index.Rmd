@@ -22,7 +22,7 @@ knitr::include_graphics(("_images/SEDSI.png"))
 
 ::: {.rmdimportant}
 
-Reproducible Data and RMarkdown
-Tobin Turner
+SEDSI Fun with Reproducible Data and RMarkdown
+
 
 :::

@@ -20,7 +20,7 @@ csl: chicago-fullnote-bibliography.csl
 
 ::: {.rmdimportant}
 
-Reproducible Data and RMarkdown
-Tobin Turner
+SEDSI Fun with Reproducible Data and RMarkdown
+
 
 :::
