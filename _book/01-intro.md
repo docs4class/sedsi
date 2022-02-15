@@ -42,19 +42,28 @@ Conflicts and students honors...
 
 Table: (\#tab:unnamed-chunk-3)Some Actual Data We Considered
 
-|   |NAME                        | TOTAL.HOURS| PC.HOURS| ADMIT.TERM|
-|:--|:---------------------------|-----------:|--------:|----------:|
-|20 |Drake, John Chapman         |          94|       94|     201801|
-|21 |Edwards, Nicholas Graham    |         101|       83|     201801|
-|22 |Ham, Ethan Ross             |          90|       90|     201801|
-|23 |Harmon, Luke Elliott        |          91|       91|     201801|
-|24 |Humphries, Lillian Kristine |          87|       78|     201801|
-|25 |Julien, Christina           |         101|       89|     201801|
-|26 |Klimpel, Jake Frederick     |         103|       97|     201801|
-|27 |Leeman, Jessica Kate        |          92|       92|     201801|
-|28 |Martin, Caroline Grace      |         101|       95|     201801|
-|29 |Matthews, William McGill    |          96|       81|     201801|
-|30 |McCutchen, Caroline Louise  |         118|       94|     201801|
+|NAME                            | TOTAL.HOURS| PC.HOURS| ADMIT.TERM|
+|:-------------------------------|-----------:|--------:|----------:|
+|Greer, Patrick Sterling         |         3.0|      3.0|     201101|
+|Greer, Patrick Sterling         |       144.0|    123.0|     201101|
+|Thompson, Charleston Hannah     |         0.0|      0.0|     201201|
+|Thompson, Charleston Hannah     |       142.0|    122.0|     201201|
+|Melvin, Victor Richard-Scorsese |       132.0|    100.0|     201202|
+|Roberson, States Taylor         |       126.0|     99.0|     201301|
+|Allen, Kaylee Michelle          |       125.0|     68.0|     201601|
+|Phelps, Payton Elliott          |       117.0|    114.0|     201701|
+|Rowley, Ella Marie Dorothy      |       121.0|    121.0|     201701|
+|Smith, Michael Leston           |       112.0|    112.0|     201701|
+|Taylor, Darrell Tyrese          |        78.0|     78.0|     201701|
+|Wright, Alexandra Ruby          |       116.0|    116.0|     201701|
+|Adu, Tyler                      |        80.0|     80.0|     201801|
+|Armell, James Richard           |        90.0|     87.0|     201801|
+|Bell, Carrie Abigail            |       120.5|     99.5|     201801|
+|Boyd, Jeremiah Quintin          |        87.0|     87.0|     201801|
+|Brinkley, Khalid Osmon          |        74.0|     74.0|     201801|
+|Campbell, Blakeney Herlong      |        92.0|     85.0|     201801|
+|Dearman, Clark Avant            |       101.5|     82.5|     201801|
+|Drake, John Chapman             |        94.0|     94.0|     201801|
 
 
 # Some Options
@@ -81,16 +90,6 @@ Date | Topic |
 
 ![](01-intro_files/figure-epub3/unnamed-chunk-4-1.png)<!-- -->
 
-## Or an Image 
-
-### Hero 1
-
-<img src="_images/bob.jpg" style="display: block; margin: auto;" />
-
-### Hero 2
-
-<img src="_images/wilma.jpg" style="display: block; margin: auto;" />
-
 ## Or an Equation
 
 Here is a **fun** equation for my SEDSI DASI friends:
@@ -105,7 +104,7 @@ Here is a **fun** equation for my SEDSI DASI friends:
 ### Fun example table
 
 
-Table: (\#tab:unnamed-chunk-7)A table of the first 10 rows of the mtcars data.
+Table: (\#tab:unnamed-chunk-5)A table of the first 10 rows of the mtcars data.
 
 |                  |  mpg| cyl|  disp|  hp| drat|    wt|  qsec| vs|
 |:-----------------|----:|---:|-----:|---:|----:|-----:|-----:|--:|
@@ -120,12 +119,26 @@ Table: (\#tab:unnamed-chunk-7)A table of the first 10 rows of the mtcars data.
 |Merc 230          | 22.8|   4| 140.8|  95| 3.92| 3.150| 22.90|  1|
 |Merc 280          | 19.2|   6| 167.6| 123| 3.92| 3.440| 18.30|  1|
 
+## Or an Image 
+
+### Hero 1
+
+<img src="_images/bob.jpg" style="display: block; margin: auto;" />
+
+### Hero 2
+
+<img src="_images/wilma.jpg" style="display: block; margin: auto;" />
+
 
 # Workflow Summary
 
 ## R (engine) and Rstudio (IDE)
 
 <img src="_images/rstudio.png" style="display: block; margin: auto;" />
+
+## R (engine) and Rstudio (IDE)
+
+<img src="_images/rmarkdown.png" style="display: block; margin: auto;" />
 
 ## bookdown package
 

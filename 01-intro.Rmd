@@ -49,7 +49,7 @@ library(dplyr)
 q1 <- EBA %>% 
   select(NAME, TOTAL.HOURS, PC.HOURS, ADMIT.TERM) %>% 
   arrange((ADMIT.TERM))
-q1 <- q1[20:30,]
+q1 <- head(q1, 20)
 knitr::kable(q1, caption = "Some Actual Data We Considered")
 ```
 
@@ -82,20 +82,6 @@ my_personal_happiness <- c(1,2,4,8,16,32,64,128,0256,512)
 plot(time_with_bob_and_wilma_andrews, my_personal_happiness, pch = 19, type = "b")
 ```
 
-## Or an Image 
-
-### Hero 1
-
-```{r echo=FALSE, fig.align='center'}
-knitr::include_graphics(("_images/bob.jpg"))
-```
-
-### Hero 2
-
-```{r echo=FALSE, fig.align='center'}
-knitr::include_graphics(("_images/wilma.jpg"))
-```
-
 ## Or an Equation
 
 Here is a **fun** equation for my SEDSI DASI friends:
@@ -116,6 +102,20 @@ knitr::kable(
 )
 ```
 
+## Or an Image 
+
+### Hero 1
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics(("_images/bob.jpg"))
+```
+
+### Hero 2
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics(("_images/wilma.jpg"))
+```
+
 
 # Workflow Summary
 
@@ -123,6 +123,12 @@ knitr::kable(
 
 ```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
 knitr::include_graphics("_images/rstudio.png")
+```
+
+## R (engine) and Rstudio (IDE)
+
+```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
+knitr::include_graphics("_images/rmarkdown.png")
 ```
 
 ## bookdown package

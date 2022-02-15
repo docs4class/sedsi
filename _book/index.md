@@ -20,7 +20,7 @@ csl: chicago-fullnote-bibliography.csl
 
 ::: {.rmdimportant}
 
-SEDSI Fun with Reproducible Data and RMarkdown
+SEDSI Fun with Reproducible Analysis and RMarkdown
 
 
 :::
