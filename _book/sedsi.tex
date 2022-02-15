@@ -6,7 +6,7 @@
 ]{book}
 \title{SEDSI 2022}
 \author{Tobin Turner}
-\date{2022-02-14}
+\date{2022-02-15}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -119,23 +119,6 @@
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{definition}
-\newtheorem{hypothesis}{Hypothesis}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -143,6 +126,14 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\hypertarget{sedsi-2022}{%
+\chapter{SEDSI 2022}\label{sedsi-2022}}
+
+\begin{center}\includegraphics{_images/SEDSI} \end{center}
+
+Reproducible Data and RMarkdown
+Tobin Turner
+
 \hypertarget{motivation}{%
 \chapter{Motivation}\label{motivation}}
 
@@ -154,7 +145,7 @@ A Learning Management System Nightmare
 
 \begin{center}\includegraphics{_images/brightspace} \end{center}
 
-Concise and Precisely Organized with Frequent Revisions
+Concise, Precisely Organized, Frequently Revised Assignments and Schedules
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
@@ -167,12 +158,23 @@ Friday, February 18, 2022 & Celebrate a successful DASI Session \\
 \bottomrule
 \end{longtable}
 
-\hypertarget{hello-sedsi}{%
-\chapter{Hello SEDSI}\label{hello-sedsi}}
+\hypertarget{real-life-example}{%
+\chapter{Real life example}\label{real-life-example}}
 
-This is just a cool place to put stuff.
+Show the student data as an en exaple of reproducible research--\textgreater{}
+
+then seguway to teacher from reproducible research focus.
+
+\hypertarget{some-options}{%
+\chapter{Some Options}\label{some-options}}
+
+\begin{quote}
+This is just a cool place to put stuff\footnote{Footnotes are always neat. And useful. Like this one!}.
+\end{quote}
 
 Like a schedule, for example:
+
+Footnotes are put inside the square brackets after a caret \footnote{}. Like this one.1
 
 \hypertarget{spring-2022}{%
 \section{Spring 2022}\label{spring-2022}}
@@ -195,7 +197,7 @@ Monday, January 24, 2022 & Summaries and Subscripting \\
 \hypertarget{or-a-figure}{%
 \section{Or a figure}\label{or-a-figure}}
 
-\includegraphics{01-intro_files/figure-latex/unnamed-chunk-1-1.pdf}
+\includegraphics{01-intro_files/figure-latex/unnamed-chunk-3-1.pdf}
 
 \hypertarget{or-an-image}{%
 \section{Or an Image}\label{or-an-image}}
@@ -213,7 +215,7 @@ Monday, January 24, 2022 & Summaries and Subscripting \\
 \hypertarget{or-an-equation}{%
 \section{Or an Equation}\label{or-an-equation}}
 
-Here is a fun equation for my SEDSI DASI friends.
+Here is a \textbf{fun} equation for my SEDSI DASI friends:
 
 \begin{equation} 
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
@@ -228,7 +230,7 @@ Here is a fun equation for my SEDSI DASI friends.
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-4}A table of the first 10 rows of the mtcars data.}
+\caption{\label{tab:unnamed-chunk-6}A table of the first 10 rows of the mtcars data.}
 \centering
 \begin{tabular}[t]{lrrrrrrrr}
 \toprule
@@ -245,36 +247,6 @@ Duster 360 & 14.3 & 8 & 360.0 & 245 & 3.21 & 3.570 & 15.84 & 0\\
 Merc 240D & 24.4 & 4 & 146.7 & 62 & 3.69 & 3.190 & 20.00 & 1\\
 Merc 230 & 22.8 & 4 & 140.8 & 95 & 3.92 & 3.150 & 22.90 & 1\\
 Merc 280 & 19.2 & 6 & 167.6 & 123 & 3.92 & 3.440 & 18.30 & 1\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\hypertarget{another-fun-example}{%
-\subsection{ANOTHER Fun example}\label{another-fun-example}}
-
-\begin{table}
-\caption{\label{tab:unnamed-chunk-5}A Tale of Two Tables.}
-
-\centering
-\begin{tabular}[t]{rr}
-\toprule
-Sepal.Length & Sepal.Width\\
-\midrule
-5.1 & 3.5\\
-4.9 & 3.0\\
-4.7 & 3.2\\
-\bottomrule
-\end{tabular}
-\centering
-\begin{tabular}[t]{lrrr}
-\toprule
-  & mpg & cyl & disp\\
-\midrule
-Mazda RX4 & 21.0 & 6 & 160\\
-Mazda RX4 Wag & 21.0 & 6 & 160\\
-Datsun 710 & 22.8 & 4 & 108\\
-Hornet 4 Drive & 21.4 & 6 & 258\\
-Hornet Sportabout & 18.7 & 8 & 360\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -302,214 +274,253 @@ Hornet Sportabout & 18.7 & 8 & 360\\
 
 \begin{center}\includegraphics{_images/netlify} \end{center}
 
-\hypertarget{cross}{%
-\chapter{Cross-references}\label{cross}}
+\hypertarget{lab-3-coronavirus-visualization-data-wrangling-and-dates}{%
+\chapter{\texorpdfstring{Lab 3: \texttt{coronavirus} visualization, data wrangling, and dates}{Lab 3: coronavirus visualization, data wrangling, and dates}}\label{lab-3-coronavirus-visualization-data-wrangling-and-dates}}
 
-Cross-references make it easier for your readers to find and link to elements in your book.
+The package is available on GitHub \href{https://github.com/RamiKrispin/coronavirus}{here} and is updated daily.
 
-\hypertarget{chapters-and-sub-chapters}{%
-\section{Chapters and sub-chapters}\label{chapters-and-sub-chapters}}
+\begin{quote}
+I use the \texttt{coronavirus} package and use the \texttt{coronavirus::update\_data()} function to keep the data current. This also has the dates preformatted which can be nice.
+\end{quote}
 
-There are two steps to cross-reference any heading:
+\hypertarget{lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals.}{%
+\section{Let's look like Applied Analytics Superstars and make some neat visuals.}\label{lets-look-like-applied-analytics-superstars-and-make-some-neat-visuals.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{coronavirus}\SpecialCharTok{::}\FunctionTok{update\_dataset}\NormalTok{()}
+\CommentTok{\#\textgreater{} Rows: 627405 Columns: 15}
+\CommentTok{\#\textgreater{} {-}{-} Column specification {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{\#\textgreater{} Delimiter: ","}
+\CommentTok{\#\textgreater{} chr  (8): province, country, type, iso2, iso3, combined\_...}
+\CommentTok{\#\textgreater{} dbl  (6): lat, long, cases, uid, code3, population}
+\CommentTok{\#\textgreater{} date (1): date}
+\CommentTok{\#\textgreater{} }
+\CommentTok{\#\textgreater{} i Use \textasciigrave{}spec()\textasciigrave{} to retrieve the full column specification for this data.}
+\CommentTok{\#\textgreater{} i Specify the column types or set \textasciigrave{}show\_col\_types = FALSE\textasciigrave{} to quiet this message.}
+\CommentTok{\#\textgreater{} Updates are available on the coronavirus Dev version, do you want to update? n/Y}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(coronavirus)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\end{Highlighting}
+\end{Shaded}
+
+I'd recommend you always start by trying to understand a bit about the data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(coronavirus)}
+\CommentTok{\#\textgreater{}         date province country     lat      long      type}
+\CommentTok{\#\textgreater{} 1 2020{-}01{-}22  Alberta  Canada 53.9333 {-}116.5765 confirmed}
+\CommentTok{\#\textgreater{} 2 2020{-}01{-}23  Alberta  Canada 53.9333 {-}116.5765 confirmed}
+\CommentTok{\#\textgreater{} 3 2020{-}01{-}24  Alberta  Canada 53.9333 {-}116.5765 confirmed}
+\CommentTok{\#\textgreater{} 4 2020{-}01{-}25  Alberta  Canada 53.9333 {-}116.5765 confirmed}
+\CommentTok{\#\textgreater{} 5 2020{-}01{-}26  Alberta  Canada 53.9333 {-}116.5765 confirmed}
+\CommentTok{\#\textgreater{} 6 2020{-}01{-}27  Alberta  Canada 53.9333 {-}116.5765 confirmed}
+\CommentTok{\#\textgreater{}   cases   uid iso2 iso3 code3    combined\_key population}
+\CommentTok{\#\textgreater{} 1     0 12401   CA  CAN   124 Alberta, Canada    4413146}
+\CommentTok{\#\textgreater{} 2     0 12401   CA  CAN   124 Alberta, Canada    4413146}
+\CommentTok{\#\textgreater{} 3     0 12401   CA  CAN   124 Alberta, Canada    4413146}
+\CommentTok{\#\textgreater{} 4     0 12401   CA  CAN   124 Alberta, Canada    4413146}
+\CommentTok{\#\textgreater{} 5     0 12401   CA  CAN   124 Alberta, Canada    4413146}
+\CommentTok{\#\textgreater{} 6     0 12401   CA  CAN   124 Alberta, Canada    4413146}
+\CommentTok{\#\textgreater{}   continent\_name continent\_code}
+\CommentTok{\#\textgreater{} 1  North America             NA}
+\CommentTok{\#\textgreater{} 2  North America             NA}
+\CommentTok{\#\textgreater{} 3  North America             NA}
+\CommentTok{\#\textgreater{} 4  North America             NA}
+\CommentTok{\#\textgreater{} 5  North America             NA}
+\CommentTok{\#\textgreater{} 6  North America             NA}
+\end{Highlighting}
+\end{Shaded}
+
+For example, what does this summary let us know?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(coronavirus}\SpecialCharTok{$}\NormalTok{cases)}
+\CommentTok{\#\textgreater{}      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. }
+\CommentTok{\#\textgreater{} {-}30974748         0         0       651        30   1369637}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Label the heading: \texttt{\#\ Hello\ world\ \{\#nice-label\}}.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Leave the label off if you like the automated heading generated based on your heading title: for example, \texttt{\#\ Hello\ world} = \texttt{\#\ Hello\ world\ \{\#hello-world\}}.
-  \item
-    To label an un-numbered heading, use: \texttt{\#\ Hello\ world\ \{-\#nice-label\}} or \texttt{\{\#\ Hello\ world\ .unnumbered\}}.
-  \end{itemize}
-\item
-  Next, reference the labeled heading anywhere in the text using \texttt{\textbackslash{}@ref(nice-label)}; for example, please see Chapter \ref{cross}.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    If you prefer text as the link instead of a numbered reference use: \protect\hyperlink{cross}{any text you want can go here}.
-  \end{itemize}
+  Can you create a visual showing the cases over time for Russia, Spain, US, and Venezuela?
+  Also, why might \texttt{filter(cases\ \textgreater{}=\ 0)} be worth using?
 \end{enumerate}
 
-\hypertarget{captioned-figures-and-tables}{%
-\section{Captioned figures and tables}\label{captioned-figures-and-tables}}
+\includegraphics{105-coronavirus_lab_files/figure-latex/unnamed-chunk-4-1.pdf}
 
-Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Can you show deaths over time for Russia, Spain, US, and Venezuela? And can you play with your geoms and make something neat?
+\end{enumerate}
 
-See Figure \ref{fig:nice-fig}.
+\includegraphics{105-coronavirus_lab_files/figure-latex/unnamed-chunk-5-1.pdf}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Now let's do a plot of COVID rate (\# confirmed cases / population). Something like this.
+\end{enumerate}
 
-\begin{figure}
+\includegraphics{105-coronavirus_lab_files/figure-latex/unnamed-chunk-6-1.pdf}
 
-{\centering \includegraphics[width=0.8\linewidth]{02-cross-refs_files/figure-latex/nice-fig-1} 
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  What is and \textbf{is not} useful about the previous illustration?
+\item
+  Make a chart with cumulative cases. Something like this:
+\end{enumerate}
 
-}
+\includegraphics{105-coronavirus_lab_files/figure-latex/unnamed-chunk-7-1.pdf}
 
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
-
-Don't miss Table \ref{tab:nice-tab}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
-  \FunctionTok{head}\NormalTok{(pressure, }\DecValTok{10}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
-  \AttributeTok{booktabs =} \ConstantTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{table}
-
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rr}
-\toprule
-temperature & pressure\\
-\midrule
-0 & 0.0002\\
-20 & 0.0012\\
-40 & 0.0060\\
-60 & 0.0300\\
-80 & 0.0900\\
-\addlinespace
-100 & 0.2700\\
-120 & 0.7500\\
-140 & 1.8500\\
-160 & 4.2000\\
-180 & 8.8000\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\hypertarget{parts}{%
-\chapter{Parts}\label{parts}}
-
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
-
-Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
-
-Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
-
-Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
-
-\includegraphics{_images/r.png} \includegraphics{_images/rstudio.png} \includegraphics{_images/bookdown.png} \includegraphics{_images/github.png} \includegraphics{_images/netlify.png}
-
-\hypertarget{footnotes-and-citations}{%
-\chapter{Footnotes and citations}\label{footnotes-and-citations}}
-
-\hypertarget{footnotes}{%
-\section{Footnotes}\label{footnotes}}
-
-Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
-
-\hypertarget{citations}{%
-\section{Citations}\label{citations}}
-
-Reference items in your bibliography file(s) using \texttt{@key}.
-
-For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib).
-Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
-
-The \texttt{bs4\_book} theme makes footnotes appear inline when you click on them. In this example book, we added \texttt{csl:\ chicago-fullnote-bibliography.csl} to the \texttt{index.Rmd} YAML, and include the \texttt{.csl} file. To download a new style, we recommend: \url{https://www.zotero.org/styles/}
-
-The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
-
-\hypertarget{blocks}{%
-\chapter{Blocks}\label{blocks}}
-
-\hypertarget{equations}{%
-\section{Equations}\label{equations}}
-
-Here is an equation.
-
-\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
-\end{equation}
-
-You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
-
-\hypertarget{theorems-and-proofs}{%
-\section{Theorems and proofs}\label{theorems-and-proofs}}
-
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
-
-\begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
-\end{theorem}
-
-Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
-
-\hypertarget{callout-blocks}{%
-\section{Callout blocks}\label{callout-blocks}}
-
-The \texttt{bs4\_book} theme also includes special callout blocks, like this \texttt{.rmdnote}.
-
-You can use \textbf{markdown} inside a block.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  With a little more time and a few extra packages, we \textbf{could} make a graph prettier. Try.
+\end{enumerate}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{head}\NormalTok{(beaver1, }\AttributeTok{n =} \DecValTok{5}\NormalTok{)}
-\CommentTok{\#\textgreater{}   day time  temp activ}
-\CommentTok{\#\textgreater{} 1 346  840 36.33     0}
-\CommentTok{\#\textgreater{} 2 346  850 36.34     0}
-\CommentTok{\#\textgreater{} 3 346  900 36.35     0}
-\CommentTok{\#\textgreater{} 4 346  910 36.42     0}
-\CommentTok{\#\textgreater{} 5 346  920 36.55     0}
+\FunctionTok{library}\NormalTok{(scales)}
+\FunctionTok{library}\NormalTok{(ggrepel)}
+\FunctionTok{library}\NormalTok{(glue)}
+\FunctionTok{library}\NormalTok{(lubridate)}
 \end{Highlighting}
 \end{Shaded}
 
-It is up to the user to define the appearance of these blocks for LaTeX output.
+\includegraphics{105-coronavirus_lab_files/figure-latex/unnamed-chunk-9-1.pdf}
 
-You may also use: \texttt{.rmdcaution}, \texttt{.rmdimportant}, \texttt{.rmdtip}, or \texttt{.rmdwarning} as the block name.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Now let's \textbf{really} have some fun. Let's illustrate death rates relative to confirmed cases. Why is this more challenging than anything we've done so far in this lab? We're going to have to make this data \textbf{tidy}.
+\end{enumerate}
 
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
+One way to play this game.
 
-\hypertarget{sharing-your-book}{%
-\chapter{Sharing your book}\label{sharing-your-book}}
+Let's make a little table of just date, country, and deaths (with a meaningful variable name), and then count observations by coutry just to make sure eveything looks nice.
 
-\hypertarget{publishing}{%
-\section{Publishing}\label{publishing}}
+\begin{verbatim}
+#>         date country deaths
+#> 1 2020-01-22  Russia      0
+#> 2 2020-01-23  Russia      0
+#> 3 2020-01-24  Russia      0
+#> 4 2020-01-25  Russia      0
+#> 5 2020-01-26  Russia      0
+#> 6 2020-01-27  Russia      0
+#>     country   n
+#> 1    Russia 748
+#> 2     Spain 745
+#> 3        US 748
+#> 4 Venezuela 747
+\end{verbatim}
 
-HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
+Let's make a little table of just confirmed cases.
 
-\hypertarget{pages}{%
-\section{404 pages}\label{pages}}
+\begin{verbatim}
+#>         date country confirmed
+#> 1 2020-01-22  Russia         0
+#> 2 2020-01-23  Russia         0
+#> 3 2020-01-24  Russia         0
+#> 4 2020-01-25  Russia         0
+#> 5 2020-01-26  Russia         0
+#> 6 2020-01-27  Russia         0
+#>     country   n
+#> 1    Russia 748
+#> 2     Spain 748
+#> 3        US 748
+#> 4 Venezuela 748
+\end{verbatim}
 
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
+Let's join these together. I use \texttt{left\_join}.
 
-\hypertarget{metadata-for-sharing}{%
-\section{Metadata for sharing}\label{metadata-for-sharing}}
+\begin{verbatim}
+#>         date country deaths confirmed
+#> 1 2020-01-22  Russia      0         0
+#> 2 2020-01-23  Russia      0         0
+#> 3 2020-01-24  Russia      0         0
+#> 4 2020-01-25  Russia      0         0
+#> 5 2020-01-26  Russia      0         0
+#> 6 2020-01-27  Russia      0         0
+#>     country   n
+#> 1    Russia 748
+#> 2     Spain 748
+#> 3        US 748
+#> 4 Venezuela 748
+\end{verbatim}
 
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
+Let's add some cumulative statistics as well.
 
-This \texttt{bs4\_book} provides enhanced metadata for social sharing, so that each chapter shared will have a unique description, auto-generated based on the content.
+\begin{verbatim}
+#>         date country deaths confirmed cumulative_cases
+#> 1 2020-01-22  Russia      0         0                0
+#> 2 2020-01-23  Russia      0         0                0
+#> 3 2020-01-24  Russia      0         0                0
+#> 4 2020-01-25  Russia      0         0                0
+#> 5 2020-01-26  Russia      0         0                0
+#> 6 2020-01-27  Russia      0         0                0
+#>   cumulative_deaths rate
+#> 1                 0    0
+#> 2                 0    0
+#> 3                 0    0
+#> 4                 0    0
+#> 5                 0    0
+#> 6                 0    0
+\end{verbatim}
 
-Specify your book's source repository on GitHub as the \texttt{repo} in the \texttt{\_output.yml} file, which allows users to view each chapter's source file or suggest an edit. Read more about the features of this output format here:
+Now we can plot some more fun stuff.
 
-\url{https://pkgs.rstudio.com/bookdown/reference/bs4_book.html}
+\includegraphics{105-coronavirus_lab_files/figure-latex/unnamed-chunk-15-1.pdf}
 
-Or use:
+\begin{verbatim}
+#>       date              country              deaths      
+#>  Min.   :2020-01-22   Length:2992        Min.   :   0.0  
+#>  1st Qu.:2020-07-26   Class :character   1st Qu.:   5.0  
+#>  Median :2021-01-29   Mode  :character   Median : 123.0  
+#>  Mean   :2021-01-29                      Mean   : 447.5  
+#>  3rd Qu.:2021-08-04                      3rd Qu.: 633.0  
+#>  Max.   :2022-02-07                      Max.   :4442.0  
+#>                                          NA's   :4       
+#>    confirmed       cumulative_cases    cumulative_deaths
+#>  Min.   : -74937   Min.   :        0   Min.   :     0   
+#>  1st Qu.:    450   1st Qu.: 12782791   1st Qu.: 16728   
+#>  Median :   7723   Median : 23178262   Median : 97790   
+#>  Mean   :  33599   Mean   : 41557773   Mean   :132138   
+#>  3rd Qu.:  27682   3rd Qu.:100031030   3rd Qu.:240231   
+#>  Max.   :1369637   Max.   :100527313   Max.   :358016   
+#>                                        NA's   :2120     
+#>       rate          
+#>  Min.   :-0.036576  
+#>  1st Qu.: 0.004592  
+#>  Median : 0.012829  
+#>  Mean   : 0.021843  
+#>  3rd Qu.: 0.023418  
+#>  Max.   : 3.840391  
+#>  NA's   :4
+\end{verbatim}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{bs4\_book}
-\end{Highlighting}
-\end{Shaded}
-
+\includegraphics{105-coronavirus_lab_files/figure-latex/unnamed-chunk-15-2.pdf}
 
   \bibliography{book.bib,packages.bib}
 

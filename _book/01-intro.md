@@ -1,8 +1,48 @@
-# Hello SEDSI
+# Motivation
 
-This is just a cool place to put stuff.
+::: {.rmdimportant}
+
+A COVID Classroom
+
+:::
+
+<img src="_images/empty_class.jpg" style="display: block; margin: auto;" />
+
+::: {.rmdimportant}
+
+A Learning Management System Nightmare
+
+:::
+
+<img src="_images/brightspace.png" style="display: block; margin: auto;" />
+
+::: {.rmdimportant}
+
+Concise, Precisely Organized, Frequently Revised Assignments and Schedules
+
+:::
+
+Date | Topic | 				
+|:-------|:------			
+| 	Wednesday, February 16, 2022	| 	SEDSI in Jacksonville	| 
+| 	Thursday, February 17, 2022	| 	Present at 2:45 PM	| 
+| 	Friday, February 18, 2022	| 	Celebrate a successful DASI Session	| 
+
+
+# Real life example
+
+Show the student data as an en exaple of reproducible research-->
+
+then seguway to teacher from reproducible research focus.
+
+
+# Some Options
+
+> This is just a cool place to put stuff^[Footnotes are always neat. And useful. Like this one!].
 
 Like a schedule, for example:
+
+Footnotes are put inside the square brackets after a caret ^[]. Like this one.1
 
 ## Spring 2022
 
@@ -18,7 +58,7 @@ Date | Topic |
 
 ## Or a figure
 
-![](01-intro_files/figure-epub3/unnamed-chunk-1-1.png)<!-- -->
+![](01-intro_files/figure-epub3/unnamed-chunk-3-1.png)<!-- -->
 
 ## Or an Image 
 
@@ -32,7 +72,7 @@ Date | Topic |
 
 ## Or an Equation
 
-Here is a fun equation for my SEDSI DASI friends.
+Here is a **fun** equation for my SEDSI DASI friends:
 
 \begin{equation} 
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
@@ -44,7 +84,7 @@ Here is a fun equation for my SEDSI DASI friends.
 ### Fun example table
 
 
-Table: (\#tab:unnamed-chunk-4)A table of the first 10 rows of the mtcars data.
+Table: (\#tab:unnamed-chunk-6)A table of the first 10 rows of the mtcars data.
 
 |                  |  mpg| cyl|  disp|  hp| drat|    wt|  qsec| vs|
 |:-----------------|----:|---:|-----:|---:|----:|-----:|-----:|--:|
@@ -58,37 +98,6 @@ Table: (\#tab:unnamed-chunk-4)A table of the first 10 rows of the mtcars data.
 |Merc 240D         | 24.4|   4| 146.7|  62| 3.69| 3.190| 20.00|  1|
 |Merc 230          | 22.8|   4| 140.8|  95| 3.92| 3.150| 22.90|  1|
 |Merc 280          | 19.2|   6| 167.6| 123| 3.92| 3.440| 18.30|  1|
-
-### ANOTHER Fun example
-
-
-<table class="kable_wrapper">
-<caption>(\#tab:unnamed-chunk-5)A Tale of Two Tables.</caption>
-<tbody>
-  <tr>
-   <td> 
-
-| Sepal.Length| Sepal.Width|
-|------------:|-----------:|
-|          5.1|         3.5|
-|          4.9|         3.0|
-|          4.7|         3.2|
-
- </td>
-   <td> 
-
-|                  |  mpg| cyl| disp|
-|:-----------------|----:|---:|----:|
-|Mazda RX4         | 21.0|   6|  160|
-|Mazda RX4 Wag     | 21.0|   6|  160|
-|Datsun 710        | 22.8|   4|  108|
-|Hornet 4 Drive    | 21.4|   6|  258|
-|Hornet Sportabout | 18.7|   8|  360|
-
- </td>
-  </tr>
-</tbody>
-</table>
 
 
 # Workflow Summary

@@ -13,37 +13,16 @@ biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 ---
 
-# Motivation
-
-::: {.rmdimportant}
-
-A COVID Classroom
-
-:::
+# SEDSI 2022
 
 ```{r echo=FALSE, fig.align = 'center'}
-knitr::include_graphics(("_images/empty_class.jpg"))
+knitr::include_graphics(("_images/SEDSI.png"))
 ```
+
 
 ::: {.rmdimportant}
 
-A Learning Management System Nightmare
+Reproducible Data and RMarkdown
+Tobin Turner
 
 :::
-
-```{r echo=FALSE, fig.align = 'center'}
-knitr::include_graphics(("_images/brightspace.png"))
-```
-
-::: {.rmdimportant}
-
-Concise and Precisely Organized with Frequent Revisions
-
-:::
-
-Date | Topic | 				
-|:-------|:------			
-| 	Wednesday, February 16, 2022	| 	SEDSI in Jacksonville	| 
-| 	Thursday, February 17, 2022	| 	Present at 2:45 PM	| 
-| 	Friday, February 18, 2022	| 	Celebrate a successful DASI Session	| 
-

@@ -1,8 +1,52 @@
-# Hello SEDSI
+# Motivation
 
-This is just a cool place to put stuff.
+::: {.rmdimportant}
+
+A COVID Classroom
+
+:::
+
+```{r echo=FALSE, fig.align = 'center'}
+knitr::include_graphics(("_images/empty_class.jpg"))
+```
+
+::: {.rmdimportant}
+
+A Learning Management System Nightmare
+
+:::
+
+```{r echo=FALSE, fig.align = 'center'}
+knitr::include_graphics(("_images/brightspace.png"))
+```
+
+::: {.rmdimportant}
+
+Concise, Precisely Organized, Frequently Revised Assignments and Schedules
+
+:::
+
+Date | Topic | 				
+|:-------|:------			
+| 	Wednesday, February 16, 2022	| 	SEDSI in Jacksonville	| 
+| 	Thursday, February 17, 2022	| 	Present at 2:45 PM	| 
+| 	Friday, February 18, 2022	| 	Celebrate a successful DASI Session	| 
+
+
+# Real life example
+
+Show the student data as an en exaple of reproducible research-->
+
+then seguway to teacher from reproducible research focus.
+
+
+# Some Options
+
+> This is just a cool place to put stuff^[Footnotes are always neat. And useful. Like this one!].
 
 Like a schedule, for example:
+
+Footnotes are put inside the square brackets after a caret ^[]. Like this one.1
 
 ## Spring 2022
 
@@ -40,7 +84,7 @@ knitr::include_graphics(("_images/wilma.jpg"))
 
 ## Or an Equation
 
-Here is a fun equation for my SEDSI DASI friends.
+Here is a **fun** equation for my SEDSI DASI friends:
 
 \begin{equation} 
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
@@ -55,18 +99,6 @@ Here is a fun equation for my SEDSI DASI friends.
 knitr::kable(
   head(mtcars[, 1:8], 10), booktabs = TRUE,
   caption = 'A table of the first 10 rows of the mtcars data.'
-)
-```
-
-### ANOTHER Fun example
-
-```{r echo=FALSE}
-knitr::kable(
-  list(
-    head(iris[, 1:2], 3),
-    head(mtcars[, 1:3], 5)
-  ),
-  caption = 'A Tale of Two Tables.', booktabs = TRUE
 )
 ```
 
