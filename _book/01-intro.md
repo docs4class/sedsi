@@ -136,7 +136,7 @@ Table: (\#tab:unnamed-chunk-5)A table of the first 10 rows of the mtcars data.
 
 <img src="_images/rstudio.png" style="display: block; margin: auto;" />
 
-## R (engine) and Rstudio (IDE)
+## RMarkdown
 
 <img src="_images/rmarkdown.png" style="display: block; margin: auto;" />
 

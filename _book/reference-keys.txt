@@ -15,7 +15,7 @@ hero-1
 hero-2
 workflow-summary
 r-engine-and-rstudio-ide
-r-engine-and-rstudio-ide-1
+rmarkdown
 bookdown-package
 github
 netlify

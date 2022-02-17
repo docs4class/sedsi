@@ -125,7 +125,7 @@ knitr::include_graphics(("_images/wilma.jpg"))
 knitr::include_graphics("_images/rstudio.png")
 ```
 
-## R (engine) and Rstudio (IDE)
+## RMarkdown
 
 ```{r echo=FALSE, fig.align='center', fig.dim = c(8, 6)}
 knitr::include_graphics("_images/rmarkdown.png")

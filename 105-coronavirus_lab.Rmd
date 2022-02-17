@@ -238,7 +238,7 @@ head(df3)
 Now we can plot some more fun stuff.
 
 
-```{r message=FALSE, warning=FALSE, echo=FALSE}
+```{r message=FALSE, warning=FALSE, echo=TRUE}
 
 ggplot(data = df3,
        mapping = aes(x = date,

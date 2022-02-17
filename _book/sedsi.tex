@@ -6,7 +6,7 @@
 ]{book}
 \title{SEDSI 2022}
 \author{Tobin Turner}
-\date{2022-02-15}
+\date{2022-02-17}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -305,8 +305,8 @@ Merc 280 & 19.2 & 6 & 167.6 & 123 & 3.92 & 3.440 & 18.30 & 1\\
 
 \begin{center}\includegraphics{_images/rstudio} \end{center}
 
-\hypertarget{r-engine-and-rstudio-ide-1}{%
-\section{R (engine) and Rstudio (IDE)}\label{r-engine-and-rstudio-ide-1}}
+\hypertarget{rmarkdown}{%
+\section{RMarkdown}\label{rmarkdown}}
 
 \begin{center}\includegraphics{_images/rmarkdown} \end{center}
 
@@ -341,7 +341,7 @@ I use the \texttt{coronavirus} package and use the \texttt{coronavirus::update\_
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{coronavirus}\SpecialCharTok{::}\FunctionTok{update\_dataset}\NormalTok{()}
-\CommentTok{\#\textgreater{} Rows: 627405 Columns: 15}
+\CommentTok{\#\textgreater{} Rows: 633609 Columns: 15}
 \CommentTok{\#\textgreater{} {-}{-} Column specification {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
 \CommentTok{\#\textgreater{} Delimiter: ","}
 \CommentTok{\#\textgreater{} chr  (8): province, country, type, iso2, iso3, combined\_...}
@@ -397,7 +397,7 @@ For example, what does this summary let us know?
 \begin{Highlighting}[]
 \FunctionTok{summary}\NormalTok{(coronavirus}\SpecialCharTok{$}\NormalTok{cases)}
 \CommentTok{\#\textgreater{}      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. }
-\CommentTok{\#\textgreater{} {-}30974748         0         0       668        30   1368563}
+\CommentTok{\#\textgreater{} {-}30974748         0         0       669        29   1368563}
 \end{Highlighting}
 \end{Shaded}
 
@@ -482,10 +482,10 @@ Let's make a little table of just date, country, and deaths (with a meaningful v
 #> 5 2020-01-26  Russia      0
 #> 6 2020-01-27  Russia      0
 #>     country   n
-#> 1    Russia 755
-#> 2     Spain 752
-#> 3        US 755
-#> 4 Venezuela 754
+#> 1    Russia 757
+#> 2     Spain 754
+#> 3        US 757
+#> 4 Venezuela 756
 \end{verbatim}
 
 Let's make a little table of just confirmed cases.
@@ -499,10 +499,10 @@ Let's make a little table of just confirmed cases.
 #> 5 2020-01-26  Russia         0
 #> 6 2020-01-27  Russia         0
 #>     country   n
-#> 1    Russia 755
-#> 2     Spain 755
-#> 3        US 755
-#> 4 Venezuela 755
+#> 1    Russia 757
+#> 2     Spain 757
+#> 3        US 757
+#> 4 Venezuela 757
 \end{verbatim}
 
 Let's join these together. I use \texttt{left\_join}.
@@ -516,10 +516,10 @@ Let's join these together. I use \texttt{left\_join}.
 #> 5 2020-01-26  Russia      0         0
 #> 6 2020-01-27  Russia      0         0
 #>     country   n
-#> 1    Russia 755
-#> 2     Spain 755
-#> 3        US 755
-#> 4 Venezuela 755
+#> 1    Russia 757
+#> 2     Spain 757
+#> 3        US 757
+#> 4 Venezuela 757
 \end{verbatim}
 
 Let's add some cumulative statistics as well.
@@ -543,34 +543,84 @@ Let's add some cumulative statistics as well.
 
 Now we can plot some more fun stuff.
 
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df3,}
+       \AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ date,}
+                     \AttributeTok{y =}\NormalTok{ rate,}
+                     \AttributeTok{color =}\NormalTok{ country)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
 \includegraphics{105-coronavirus_lab_files/figure-latex/unnamed-chunk-15-1.pdf}
 
-\begin{verbatim}
-#>       date              country              deaths      
-#>  Min.   :2020-01-22   Length:3020        Min.   :   0.0  
-#>  1st Qu.:2020-07-28   Class :character   1st Qu.:   5.0  
-#>  Median :2021-02-02   Mode  :character   Median : 125.5  
-#>  Mean   :2021-02-02                      Mean   : 451.2  
-#>  3rd Qu.:2021-08-10                      3rd Qu.: 637.5  
-#>  Max.   :2022-02-14                      Max.   :4442.0  
-#>                                          NA's   :4       
-#>    confirmed         cumulative_cases    cumulative_deaths
-#>  Min.   : -74937.0   Min.   :        0   Min.   :     0   
-#>  1st Qu.:    458.2   1st Qu.: 14102736   1st Qu.: 16922   
-#>  Median :   7785.5   Median : 24775642   Median : 99049   
-#>  Mean   :  34172.4   Mean   : 43119360   Mean   :134411   
-#>  3rd Qu.:  27947.2   3rd Qu.:102694694   3rd Qu.:246397   
-#>  Max.   :1368563.0   Max.   :103200641   Max.   :362845   
-#>                                          NA's   :2141     
-#>       rate          
-#>  Min.   :-0.036576  
-#>  1st Qu.: 0.004568  
-#>  Median : 0.012754  
-#>  Mean   : 0.021708  
-#>  3rd Qu.: 0.023302  
-#>  Max.   : 3.840391  
-#>  NA's   :4
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\FunctionTok{summary}\NormalTok{(df3)}
+\CommentTok{\#\textgreater{}       date              country              deaths      }
+\CommentTok{\#\textgreater{}  Min.   :2020{-}01{-}22   Length:3028        Min.   :   0.0  }
+\CommentTok{\#\textgreater{}  1st Qu.:2020{-}07{-}29   Class :character   1st Qu.:   5.0  }
+\CommentTok{\#\textgreater{}  Median :2021{-}02{-}03   Mode  :character   Median : 126.0  }
+\CommentTok{\#\textgreater{}  Mean   :2021{-}02{-}03                      Mean   : 452.7  }
+\CommentTok{\#\textgreater{}  3rd Qu.:2021{-}08{-}11                      3rd Qu.: 639.2  }
+\CommentTok{\#\textgreater{}  Max.   :2022{-}02{-}16                      Max.   :4442.0  }
+\CommentTok{\#\textgreater{}                                          NA\textquotesingle{}s   :4       }
+\CommentTok{\#\textgreater{}    confirmed         cumulative\_cases    cumulative\_deaths}
+\CommentTok{\#\textgreater{}  Min.   : {-}74937.0   Min.   :        0   Min.   :     0   }
+\CommentTok{\#\textgreater{}  1st Qu.:    461.5   1st Qu.: 14445698   1st Qu.: 16977   }
+\CommentTok{\#\textgreater{}  Median :   7814.0   Median : 25190092   Median : 99431   }
+\CommentTok{\#\textgreater{}  Mean   :  34303.5   Mean   : 43523860   Mean   :135068   }
+\CommentTok{\#\textgreater{}  3rd Qu.:  28170.0   3rd Qu.:103362932   3rd Qu.:248203   }
+\CommentTok{\#\textgreater{}  Max.   :1368563.0   Max.   :103870974   Max.   :364273   }
+\CommentTok{\#\textgreater{}                                          NA\textquotesingle{}s   :2147     }
+\CommentTok{\#\textgreater{}       rate          }
+\CommentTok{\#\textgreater{}  Min.   :{-}0.036576  }
+\CommentTok{\#\textgreater{}  1st Qu.: 0.004568  }
+\CommentTok{\#\textgreater{}  Median : 0.012750  }
+\CommentTok{\#\textgreater{}  Mean   : 0.021680  }
+\CommentTok{\#\textgreater{}  3rd Qu.: 0.023227  }
+\CommentTok{\#\textgreater{}  Max.   : 3.840391  }
+\CommentTok{\#\textgreater{}  NA\textquotesingle{}s   :4}
+\FunctionTok{library}\NormalTok{(scales)}
+\FunctionTok{library}\NormalTok{(ggrepel)}
+\FunctionTok{library}\NormalTok{(glue)}
+\FunctionTok{library}\NormalTok{(lubridate)}
+\NormalTok{as\_of\_date }\OtherTok{\textless{}{-}}\NormalTok{ df3 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarise}\NormalTok{(}\FunctionTok{max}\NormalTok{(date)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{pull}\NormalTok{()}
+\NormalTok{as\_of\_date\_formatted }\OtherTok{\textless{}{-}} \FunctionTok{glue}\NormalTok{(}\StringTok{"\{wday(as\_of\_date, label = TRUE)\}, \{month(as\_of\_date, label = TRUE)\} \{day(as\_of\_date)\}, \{year(as\_of\_date)\}"}\NormalTok{)}
+
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df3,}
+       \AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ date, }
+                     \AttributeTok{y =}\NormalTok{ cumulative\_cases, }
+                     \AttributeTok{color =}\NormalTok{ country)) }\SpecialCharTok{+}
+  \CommentTok{\# represent cumulative cases with lines}
+  \FunctionTok{geom\_line}\NormalTok{(}\AttributeTok{size =} \FloatTok{0.7}\NormalTok{, }\AttributeTok{alpha =} \FloatTok{0.8}\NormalTok{) }\SpecialCharTok{+}
+  \CommentTok{\# add points to line endings}
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+  \CommentTok{\# add country labels, nudged above the lines}
+  \CommentTok{\# geom\_label\_repel(nudge\_y = 1, direction = "y", hjust = 1) + }
+  \CommentTok{\# turn off legend}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{color =} \ConstantTok{FALSE}\NormalTok{) }\SpecialCharTok{+}
+  \CommentTok{\# use pretty colors}
+  \FunctionTok{scale\_color\_viridis\_d}\NormalTok{() }\SpecialCharTok{+}
+  \CommentTok{\# better formatting for y{-}axis}
+  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{label\_comma}\NormalTok{()) }\SpecialCharTok{+}
+  \CommentTok{\# use minimal theme}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \CommentTok{\# customize labels}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{x =} \StringTok{"My pretty Lab 3 visual"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Cumulative number of deaths"}\NormalTok{,}
+    \AttributeTok{title =} \StringTok{"Cumulative deaths from COVID{-}19, selected countries"}\NormalTok{,}
+    \AttributeTok{subtitle =} \FunctionTok{glue}\NormalTok{(}\StringTok{"Data as of"}\NormalTok{, as\_of\_date\_formatted, }\AttributeTok{.sep =} \StringTok{" "}\NormalTok{),}
+    \AttributeTok{caption =} \StringTok{"Source: github.com/RamiKrispin/coronavirus"}
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
 
 \includegraphics{105-coronavirus_lab_files/figure-latex/unnamed-chunk-15-2.pdf}
 

@@ -12,7 +12,7 @@ I use the `coronavirus` package and use the `coronavirus::update_data()` functio
 
 ```r
 coronavirus::update_dataset()
-#> Rows: 627405 Columns: 15
+#> Rows: 633609 Columns: 15
 #> -- Column specification ------------------------------------
 #> Delimiter: ","
 #> chr  (8): province, country, type, iso2, iso3, combined_...
@@ -66,7 +66,7 @@ For example, what does this summary let us know?
 ```r
 summary(coronavirus$cases)
 #>      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-#> -30974748         0         0       668        30   1368563
+#> -30974748         0         0       669        29   1368563
 ```
 
 1. Can you create a visual showing the cases over time for Russia, Spain, US, and Venezuela?
@@ -120,10 +120,10 @@ Let's make a little table of just date, country, and deaths (with a meaningful v
 #> 5 2020-01-26  Russia      0
 #> 6 2020-01-27  Russia      0
 #>     country   n
-#> 1    Russia 755
-#> 2     Spain 752
-#> 3        US 755
-#> 4 Venezuela 754
+#> 1    Russia 757
+#> 2     Spain 754
+#> 3        US 757
+#> 4 Venezuela 756
 ```
 
 Let's make a little table of just confirmed cases.
@@ -138,10 +138,10 @@ Let's make a little table of just confirmed cases.
 #> 5 2020-01-26  Russia         0
 #> 6 2020-01-27  Russia         0
 #>     country   n
-#> 1    Russia 755
-#> 2     Spain 755
-#> 3        US 755
-#> 4 Venezuela 755
+#> 1    Russia 757
+#> 2     Spain 757
+#> 3        US 757
+#> 4 Venezuela 757
 ```
 
 Let's join these together. I use `left_join`.  
@@ -157,10 +157,10 @@ Let's join these together. I use `left_join`.
 #> 5 2020-01-26  Russia      0         0
 #> 6 2020-01-27  Russia      0         0
 #>     country   n
-#> 1    Russia 755
-#> 2     Spain 755
-#> 3        US 755
-#> 4 Venezuela 755
+#> 1    Russia 757
+#> 2     Spain 757
+#> 3        US 757
+#> 4 Venezuela 757
 ```
 
 Let's add some cumulative statistics as well.
@@ -186,33 +186,80 @@ Let's add some cumulative statistics as well.
 Now we can plot some more fun stuff.
 
 
+
+```r
+
+ggplot(data = df3,
+       mapping = aes(x = date,
+                     y = rate,
+                     color = country)) +
+  geom_line()
+```
+
 ![](105-coronavirus_lab_files/figure-epub3/unnamed-chunk-15-1.png)<!-- -->
 
-```
+```r
+
+summary(df3)
 #>       date              country              deaths      
-#>  Min.   :2020-01-22   Length:3020        Min.   :   0.0  
-#>  1st Qu.:2020-07-28   Class :character   1st Qu.:   5.0  
-#>  Median :2021-02-02   Mode  :character   Median : 125.5  
-#>  Mean   :2021-02-02                      Mean   : 451.2  
-#>  3rd Qu.:2021-08-10                      3rd Qu.: 637.5  
-#>  Max.   :2022-02-14                      Max.   :4442.0  
+#>  Min.   :2020-01-22   Length:3028        Min.   :   0.0  
+#>  1st Qu.:2020-07-29   Class :character   1st Qu.:   5.0  
+#>  Median :2021-02-03   Mode  :character   Median : 126.0  
+#>  Mean   :2021-02-03                      Mean   : 452.7  
+#>  3rd Qu.:2021-08-11                      3rd Qu.: 639.2  
+#>  Max.   :2022-02-16                      Max.   :4442.0  
 #>                                          NA's   :4       
 #>    confirmed         cumulative_cases    cumulative_deaths
 #>  Min.   : -74937.0   Min.   :        0   Min.   :     0   
-#>  1st Qu.:    458.2   1st Qu.: 14102736   1st Qu.: 16922   
-#>  Median :   7785.5   Median : 24775642   Median : 99049   
-#>  Mean   :  34172.4   Mean   : 43119360   Mean   :134411   
-#>  3rd Qu.:  27947.2   3rd Qu.:102694694   3rd Qu.:246397   
-#>  Max.   :1368563.0   Max.   :103200641   Max.   :362845   
-#>                                          NA's   :2141     
+#>  1st Qu.:    461.5   1st Qu.: 14445698   1st Qu.: 16977   
+#>  Median :   7814.0   Median : 25190092   Median : 99431   
+#>  Mean   :  34303.5   Mean   : 43523860   Mean   :135068   
+#>  3rd Qu.:  28170.0   3rd Qu.:103362932   3rd Qu.:248203   
+#>  Max.   :1368563.0   Max.   :103870974   Max.   :364273   
+#>                                          NA's   :2147     
 #>       rate          
 #>  Min.   :-0.036576  
 #>  1st Qu.: 0.004568  
-#>  Median : 0.012754  
-#>  Mean   : 0.021708  
-#>  3rd Qu.: 0.023302  
+#>  Median : 0.012750  
+#>  Mean   : 0.021680  
+#>  3rd Qu.: 0.023227  
 #>  Max.   : 3.840391  
 #>  NA's   :4
+library(scales)
+library(ggrepel)
+library(glue)
+library(lubridate)
+as_of_date <- df3 %>% 
+  summarise(max(date)) %>% 
+  pull()
+as_of_date_formatted <- glue("{wday(as_of_date, label = TRUE)}, {month(as_of_date, label = TRUE)} {day(as_of_date)}, {year(as_of_date)}")
+
+ggplot(data = df3,
+       mapping = aes(x = date, 
+                     y = cumulative_cases, 
+                     color = country)) +
+  # represent cumulative cases with lines
+  geom_line(size = 0.7, alpha = 0.8) +
+  # add points to line endings
+  geom_point() +
+  # add country labels, nudged above the lines
+  # geom_label_repel(nudge_y = 1, direction = "y", hjust = 1) + 
+  # turn off legend
+  guides(color = FALSE) +
+  # use pretty colors
+  scale_color_viridis_d() +
+  # better formatting for y-axis
+  scale_y_continuous(labels = label_comma()) +
+  # use minimal theme
+  theme_minimal() +
+  # customize labels
+  labs(
+    x = "My pretty Lab 3 visual",
+    y = "Cumulative number of deaths",
+    title = "Cumulative deaths from COVID-19, selected countries",
+    subtitle = glue("Data as of", as_of_date_formatted, .sep = " "),
+    caption = "Source: github.com/RamiKrispin/coronavirus"
+  )
 ```
 
 ![](105-coronavirus_lab_files/figure-epub3/unnamed-chunk-15-2.png)<!-- -->
